@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+{% extends "base.jinja2" %}
+{% block content %}
+	
+	<!-- Loading Bar -->
+
+	<!-- Table -->
+
+	<div id="table-wrap">
+		<table>
+			<header>Recent Merges</header> 
+			<tr>
+				<th>Merge_ID</th>
+				<th>Library</th>
+				<th>Project</th>
+				<th>#ALC</th>
+				<th>Genome_Ref</th>
+				<th>Seq_Len</th>
+				<th>Sucess</th>
+				<th>Status</th>
+				<th>Data_Path</th>
+				<th>Process_Start</th>
+				<th>Process_Complete</th>
+			</tr>
+			{% for each in recent_merges %}
+			<tr>
+				<td>{{each.id}}</td>
+				<td>{{each.library}}</td>
+				<td>{{each.project}}</td>
+				<td>{{each.num_alc}}</td>
+				<td>{{each.genome_ref}}</td>
+				<td>{{each.seq_len}}</td>
+				<td>{{each.success}}</td>
+				<td>{{each.status}}</td>
+				<td>{{each.data_path}}</td>
+				<td>{{each.process_start}}</td>
+				<td>{{each.process_complete}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+{% endblock %}

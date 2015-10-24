@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang=''>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="{{request.static_url('tbuddy:static/js/jquery-2.1.3.min.js')}}"></script>
+  <script src="{{request.static_url('tbuddy:static/js/actionHandler.js')}}"></script>
+  <script src="{{request.static_url('tbuddy:static/js/loadingScreen.js')}}"></script>
+  <link rel="stylesheet" href="{{request.static_url('tbuddy:static/css/style.css')}}" />
+
+
+  <title>TaskBuddy</title>
+</head>
+
+<body>
+<!-- Top Dropdown Menu Bar -->
+<nav id="primary_nav_wrap">
+<ul>
+  <li class="current-menu-item"><a href="/">Home</a></li>
+  <!-- <li><a href="/merges">Merges</a> -->
+  <li><button id="merges">Merges</button>
+    <ul>
+      <li><a href="/merges">Recent</a></li>
+      <li><a href="#">SOP</a></li>
+      <li><a href="#">Upcoming Merges</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Variant Calls</a>
+    <ul>
+      <li><a href="#">Recent</a></li>
+      <li><a href="#">SOP</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Somatic Paired Analyses</a>
+    <ul>
+      <li class="dir"><a href="#">Recent</a></li>
+      <li class="dir"><a href="#">SOP</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Scheduled Tasks</a></li>
+  <li><a href="#">Disk Usage</a></li>
+  <li><a href="#">Sites</a>
+    <ul>
+      <li><a href="#">JIRA</a>
+        <ul>
+          <li><a href="#">My Open Issues</a></li>
+          <li><a href="#">Reported by Me</a></li>
+          <li><a href="#">Recently Viewed</a></li>
+          <li><a href="#">Watched</a></li>
+          <li><a href="#">Recent Systems Issues</a></li>
+        </ul>
+      </li>
+      <li><a href="#">GIN</a></li>
+      <li><a href="#">Odin</a></li>
+      <li><a href="#">Webmail</a></li>
+    </ul>
+  </li>
+</ul>
+</nav>
+
+<!-- Loader -->
+<!-- <div id="loader-wrapper">
+    <div id="loader"></div>
+
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+ 
+</div> -->
+
+
+<!-- Content -->
+<div class="content container">
+   <div class="row">
+       <div class="col-md-8">
+       {% block content %}
+       {% endblock %}
+       </div>
+   </div>
+</div>
+
+</body>
+<html>

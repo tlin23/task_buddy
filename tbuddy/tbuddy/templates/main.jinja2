@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<!--
+  Phase Shift by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license). 
+
+  main.jinja2 is the frontpage of the app. 
+  It contains
+  -
+  -
+  -
+
+
+-->
+{% extends "base.jinja2" %}
+{% block content %}
+
+  <div id="table-wrap">
+    <table>
+      <tr>
+        <header>Current Batch Analyses</header>
+      </tr>
+      <tr>
+        <th>Batch</th>
+        <th>Priority</th>
+        <th>Project</th>
+        <th>JIRA Ticket</th>
+        <th>File</th>
+        <th>Pipeline</th>
+        <th>Active</th>
+        <th>Procedure</th>
+        <th>Progress</th>
+        <th>Running</th>
+        <th>Failed</th>
+        <th>Pending</th>
+        <th>Details</th>
+        <th>Log</th>
+      <tr>
+
+<!--       {% for batch in batches %}
+      <tr>
+        <td>{{batch.id}}</td>
+        <td>{{batch.priority}}</td>
+        <td>{{batch.project}}</td>
+        <td>{{batch.jira_ticket}}</td>
+        <td>{{batch.file_path}}</td>
+        <td>{{batch.pipeline}}</td>
+        <td>{{batch.active}}</td>
+        <td>{{batch.procedure}}</td>
+        <td>{{batch.progress}}</td>
+        <td>{{batch.running}}</td>
+        <td>{{batch.failed}}</td>
+        <td>{{batch.pending}}</td>
+        <td>{{batch.details}}</td>
+        <td>{{batch.log}}</td>
+      </tr>
+      {% endfor %} -->
+
+    </table>
+  </div>
+
+  <div id="table-wrap">
+    <table>
+      <tr>
+        <header>Genesis Queue Status</header>
+      </tr>
+      <tr>
+        <th>Analysis</th>
+        <th>Quota</th>
+        <th>Running</th>
+        <th>Waiting</th>
+        <th>Error</th>
+        <th>Identifier</th>
+      <tr>
+      {% for each in queue %}
+      <tr>
+        <td>{{each.analysis}}</td>
+        <td>{{each.quota}}</td>
+        <td>{{each.running}}</td>
+        <td>{{each.waiting}}</td>
+        <td>{{each.error}}</td>
+        <td>{{each.identifier}}</td>
+      </tr>
+      {% endfor %}   
+    </table>
+  </div>
+
+  <div id="table-wrap">    
+  <table>
+    <tr>
+      <th>Batch</th>
+      <th>Priority</th>
+      <th>Project</th>
+      <th>Favorite Color</th>
+      <th>Wars or Trek?</th>
+      <th>Porn Name</th>
+      <th>Date of Birth</th>
+      <th>Dream Vacation City</th>
+      <th>GPA</th>
+      <th>Arbitrary Data</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>Lettuce Green</td>
+      <td>Trek</td>
+      <td>Digby Green</td>
+      <td>January 13, 1979</td>
+      <td>Gotham City</td>
+      <td>3.1</td>
+      <td>RBX-12</td>
+    </tr>
+    <tr>
+      <td>The</td>
+      <td>Tick</td>
+      <td>Crimefighter Sorta</td>
+      <td>Blue</td>
+      <td>Wars</td>
+      <td>John Smith</td>
+      <td>July 19, 1968</td>
+      <td>Athens</td>
+      <td>N/A</td>
+      <td>Edlund, Ben (July 1996).</td>
+    </tr>
+    <tr>
+      <td>Jokey</td>
+      <td>Smurf</td>
+      <td>Giving Exploding Presents</td>
+      <td>Smurflow</td>
+      <td>Smurf</td>
+      <td>Smurflane Smurfmutt</td>
+      <td>Smurfuary Smurfteenth, 1945</td>
+      <td>New Smurf City</td>
+      <td>4.Smurf</td>
+      <td>One</td>
+    </tr>
+    <tr>
+      <td>Cindy</td>
+      <td>Beyler</td>
+      <td>Sales Representative</td>
+      <td>Red</td>
+      <td>Wars</td>
+      <td>Lori Quivey</td>
+      <td>July 5, 1956</td>
+      <td>Paris</td>
+      <td>3.4</td>
+      <td>3451</td>
+    </tr>
+    <tr>
+      <td>Captain</td>
+      <td>Cool</td>
+      <td>Tree Crusher</td>
+      <td>Blue</td>
+      <td>Wars</td>
+      <td>Steve 42nd</td>
+      <td>December 13, 1982</td>
+      <td>Las Vegas</td>
+      <td>1.9</td>
+      <td>Under the couch</td>
+    </tr>
+  </table>
+  
+  </div>
+  
+  </div>
+
+  
+
+ {% endblock %}

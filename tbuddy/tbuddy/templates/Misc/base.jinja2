@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<!--
+	Phase Shift by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+
+	Base.jinja2 contains the topbar/sidebar/copyright. It is extended throughout the application
+-->
+<html>
+	<!-- This is where you add the style sheets -->
+	<head>
+		<title>TaskBuddy by Terry Lin</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="{{request.static_url('tbuddy:static/js/jquery.min.js')}}"></script>
+		<script src="{{request.static_url('tbuddy:static/js/jquery.dropotron.min.js')}}"></script>
+		<script src="{{request.static_url('tbuddy:static/js/skel.min.js')}}"></script>
+		<script src="{{request.static_url('tbuddy:static/js/skel-layers.min.js')}}"></script>
+		<script src="{{request.static_url('tbuddy:static/js/init.js')}}"></script>
+ 		<!-- <noscript> -->
+		<link rel="stylesheet" href="{{request.static_url('tbuddy:static/css/skel.css')}}" />
+		<link rel="stylesheet" href="{{request.static_url('tbuddy:static/css/style.css')}}" />
+		<link rel="stylesheet" href="{{request.static_url('tbuddy:static/css/style-wide.css')}}" />
+<!-- 		<link rel="stylesheet" href="{{request.static_url('tbuddy:static/css/table-style.css')}}" /> -->
+ 		<!-- </noscript> -->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+
+
+	<body>
+		<!-- Wrapper -->
+	<div class="wrapper style1">
+	<!-- Header -->
+	<div id="header" class="skel-panels-fixed">
+		<div id="logo">
+			<h1><a href="/">TaskBuddy</a></h1>
+		</div>
+		<nav id="nav">
+			<ul>
+                <li class="active"><a href="/">Homepage</a></li>
+           		<li><a href="#">Merge</a></li>
+                <li><a href="#">Variant Call</a></li>
+                <li><a href="#">Somatic</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<!-- Sidebar -->
+<!-- 	<div id='cssmenu'>
+	<ul>
+	   <li class='active'><a href='#'><span>Home</span></a></li>
+	   <li><a href='#'><span>Products</span></a></li>
+	   <li><a href='#'><span>Company</span></a></li>
+	   <li class='last'><a href='#'><span>Contact</span></a></li>
+	</ul>
+	</div> -->
+
+	<!-- Content -->
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+	</div>
+
+
+
+
+	<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+				<div class="copyright">
+					<p>Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)</p>
+					<ul class="icons">
+{# 						<li><a href="#" class="fa fa-facebook"><span>Facebook</span></a></li>
+						<li><a href="#" class="fa fa-twitter"><span>Twitter</span></a></li>
+						<li><a href="#" class="fa fa-google-plus"><span>Google+</span></a></li> #}
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
